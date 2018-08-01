@@ -35,6 +35,10 @@ $primary-invert: $pink-invert;
             transform: rotate(359deg); } }
 
 /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+.icon-padding {
+  padding: 0 3% 0 3%;
+}
+
 html,
 body,
 p,

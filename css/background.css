@@ -38,6 +38,10 @@
   color: #FF475D;
 }
 
+.icon-padding {
+  padding: 0 3% 0 3%;
+}
+
 .big-icon {
     font-size: 10vh;
 }

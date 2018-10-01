@@ -1,182 +1,234 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>th3.build/tv</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-  <!-- Bulma Version 0.6.2-->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="../css/landing.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dean's goofs</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <!-- Bulma Version 0.7.1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <style type="text/css">
+        html,
+        body {
+            font-family: 'Open Sans';
+            /*background:#4a4a4a;*/
+            
+            }
+
+        .title {
+            font-family: 'Abril Fatface';
+        }
+
+        .drone-back {
+            background: url(media/keyboard.webp);
+        }
+
+        .keyboard-back {
+          background: url(media/atm.webp);
+        }
+
+        .light-back {
+          background: url(media/light.webp);
+        }
+
+        .brave-back {
+          background: url(media/brave.webp);
+        }
+
+        .bug-back {
+          background: url(media/bug.webp);
+        }
+
+        .intro-back {
+          background: url(media/intro.webp);
+        }
+
+        /*Stack background covers*/
+        .drone-back, .keyboard-back, .light-back, .brave-back, .bug-back, .intro-back {
+          -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .box {
+          min-height: 120px;
+
+          /*v-centered*/
+          display: flex;
+            flex-wrap: wrap;
+            align-content: center; /* used this for multiple child */
+            align-items: center;
+        }
+
+        .light {
+            /*background-color: rgb(255, 255, 255, .8);*/
+            color: white;
+            text-shadow: 2px 2px 2px #474C4B;
+        }
+
+        .red {
+          color: #FF475D;
+        }
+
+        /*Correcting for main.css*/
+        .title, .subtitle, .tabs a, body {
+            color: white;
+        }
+
+        .hero-bkg-animated {
+                /*background: #4a4a4a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23FF475D' fill-opacity='0.14'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat 0 0;*/
+                background: #4a4a4a url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23ff475d' fill-opacity='0.11' fill-rule='evenodd'/%3E%3C/svg%3E");
+                box-sizing: border-box;
+                padding-top: 5vh;
+                -webkit-animation: slide 20s linear infinite;
+        }
+        @-webkit-keyframes slide {
+                  from { background-position: 0 0; }
+                  to { background-position: -400px 0; }
+        }
+    </style>
 </head>
+
 <body>
-
-  <section class="hero is-info" style="background-color: #323232">
-    <div class="hero-head">
-      <nav class="navbar" style="margin-top: 5vh;">
-        <div class="container">
-          <div class="navbar-brand">
-            <a href="index.html" class="navbar-item">
-              <img src="media/text_whitered.svg" style="min-height: 40px;">
-            </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenu" class="navbar-menu">
-              <div class="navbar-end">
-              
-              <span class="navbar-item">
-                <a class="button is-white is-outlined" href="https://th3build.substack.com">
-                  <span class="icon">
-                    <i class="fa fa-book"></i>
-                  </span>
-                  <span>Newsletter</span>
-                </a>
-              </span>  
-              <span class="navbar-item">
-                <a class="button is-white is-outlined" href="https://th3build.substack.com">
-                  <span class="icon">
-                    <i class="fa fa-book"></i>
-                  </span>
-                  <span>Newsletter</span>
-                </a>
-              </span>
-              <!-- <span class="navbar-item">
-                <a class="button is-white is-outlined" href="http://twitter.com/th3build">
-                  <span class="icon">
-                    <i class="fa fa-twitter"></i>
-                  </span>
-                  <span>Updates</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined" href="http://medium.com/th3build">
-                  <span class="icon">
-                    <i class="fa fa-medium"></i>
-                  </span>
-                  <span>The Publication</span>
-                </a>
-              </span> -->
-              <span class="navbar-item">
-                <a class="button is-white is-outlined" href="https://github.com/th3build">
-                  <span class="icon">
-                    <i class="fa fa-github"></i>
-                  </span>
-                  <span>Our Hub</span>
-                </a>
-              </span>
-          </div>
+    <section class="hero hero-bkg-animated is-fullheight is-default is-bold">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <!-- <img src="../images/bulma.png" alt="Logo"> -->
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+                        <span></span>
+                        <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <!-- <li class="is-active"><a>Home</a></li>
+                                    <li><a href="">Examples</a></li>
+                                    <li><a href="">Features</a></li> -->
+                                    <li><a href="https://th3build.substack.com">🗞 Newsletter</a></li>
+                                    <li><a href="https://twitter.com/th3build">✍️ Wiki</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
-  </section>
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    
+                    <div class="column is-3">
+                        <h1 class="title is-2 abril">
+                            th3.<span class="red">build</span>/tv
+                        </h1>
+                        <h2 class="subtitle is-4">
+                            we do blockchain stuff & make videos
+                        </h2>
+                        <a class="button is-large is-danger" href="https://www.youtube.com/channel/UCNRzP9s622B7VLcAZrU09mg?sub_confirmation=1">Subscribe</a>
+                    </div>
+                    <div class="column is-9 ">
 
-  <section class="section" style="margin-top: 5vh">
-    
-    <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-5 is-offset-1">
-              <p class="title has-text-white-ter">th<span style="color: red">3</span>.build/<span style="color: red">tv</span></p>
-              <p>
-                Dive into the lifestyles of builders of a new frontier. Like explorers before us, there is no precedent or path that we can follow. We take confidence in our decisions without knowing whether it will be interpretted by history as genius or folly.<br><br>
+                        <!-- 22222 TILING EXPERIMENT -->
+                        <div class="tile is-ancestor">
+                            <div class="tile is-parent">
+                                <div class="tile is-child drone-back level box">
+                                  <div class="level-item">
+                                    <p class="title"><a class="light" href="https://www.youtube.com/watch?v=cbMDgGD-HOE">Make a Wallet</a></p>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <div class="tile is-child keyboard-back level box">
+                                  <div class="level-item">
+                                    <p class="title">
+                                      <a class="light" href="https://www.youtube.com/watch?v=sn3qK-Uf9Tk">Bitcoin ATM</a>
+                                  </p>
+                                  </div>
+                                </div>
+                            </div>
+                          <div class="tile is-parent">
+                            <div class="tile is-child light-back level box">
+                              <div class="level-item">
+                                <p class="title">
+                                  <a class="light" href="https://www.youtube.com/watch?v=gqNrQqljT3c">Lightning</a>
+                              </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tile is-ancestor">
+                            <div class="tile is-parent">
+                                <div class="tile is-child brave-back level box">
+                                  <div class="level-item">
+                                    <p class="title">
+                                      <a class="light" href="https://www.youtube.com/watch?v=oAeNnaDDXek">🚫ADS</a>
+                                  </p>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <div class="tile is-child bug-back level box">
+                                  <div class="level-item">
+                                    <p class="title">
+                                      <!-- <img src="https://sabaki.yichuanshen.de/img/logo.png" style="height: 35px;">  -->
+                                      <a class="light" href="https://www.youtube.com/watch?v=mehG9tQivVM">BUGS🐛 </a>
+                                  </p>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <div class="tile is-child level intro-back box">
+                                  <div class="level-item" style="margin-top: 10px;">
+                                    <p class="title">
+                                      <!-- <img src="https://sabaki.yichuanshen.de/img/logo.png" style="height: 35px;">  -->
+                                      <a class="light" href="https://www.youtube.com/channel/UCNRzP9s622B7VLcAZrU09mg/featured">
+                                        <img src="media/youtube.svg" style="height: 25px;">
+                                      </a>
+                                  </p>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
 
-                This isn't about making money. Or day trading. That's boring. This is about evolution. Facing the unknown. Taking on the status quo to deliver better. 
-              </p>
+                        <!-- // TILING EXPERIMENT -->
+
+
+
+
+
+
+
+                    </div>
+                </div>
             </div>
-          <div class="column"></div>
         </div>
-    </div>
 
-    <div class="container" style="padding-top: 7vh;">
-        <div class="columns">
-          <div class="column is-5 is-offset-1">
-            <!-- <iframe id="ytplayer" type="text/html" width="100%" height="405"
-            src="https://www.youtube.com/embed/?listType=playlist&list=PL4WOOiF0y0iTa0PcBJCg1o3YJCvGggqpC"
-            frameborder="0" allowfullscreen></iframe> -->
-            <div class="column">
-            <iframe id="ytplayer" type="text/html" width="100%" height="405"
-            src="https://www.youtube.com/embed/?listType=playlist&list=PL4WOOiF0y0iS_eccNdy0EqDTKXp61dkJv"
-            frameborder="0" allowfullscreen></iframe>
-          </div>
-          </div>
-          <div class="column">
-              <p class="title has-text-white-ter">Let's Build</p>
-              <p>
-                How does someone start building with blockchain and cryptocurrency? What practical problems does this solve? <br><br>
-
-              </p>
-          </div>
+        <div class="hero-foot">
+            <div class="container">
+                <div class="level">
+                  <div class="level-item title">
+                    <span style="opacity: .3;">made by <a href="http://philipglazman.com">phil</a> & <a href="http://dean.lol">dean</a></span>
+                    <br><br>
+                  </div>
+                  
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="container" style="padding-top: 7vh;">
-        <div class="columns">
-          <div class="column is-5 is-offset-1">
-              <p class="title has-text-white-ter">After Hours</p>
-              <p>
-                Follow builders on their off-topic adventures.
-              </p>
-          </div>
-          <div class="column">
-            <iframe id="ytplayer" type="text/html" width="100%" height="405"
-            src="https://www.youtube.com/embed/?listType=playlist&list=PL4WOOiF0y0iTa0PcBJCg1o3YJCvGggqpC"
-            frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-    </div>
-  </section>
-  
-
-
-
-
-  <!-- <section>
-    <div class="columns" style="margin-top: 100px">
-      <div class="column is-half is-offset-one-quarter">
-        <div class="title">Culture of the Future</div>
-        <p>
-          Dive into the lifestyles of builders of this new frontier. Like explorers before us, there is no precedent or path that we can follow. We take confidence in our decisions without knowing whether it will be interpretted by history as genius or folly.<br><br>
-
-          This isn't about making money. Or day trading. That's boring. This is about evolution. Facing the unknown. Taking on the status quo in order to deliver better. 
-        </p>
-        
-      </div>
-    </div>
-  </section> -->
-
-
-  <script async type="text/javascript" src="../js/bulma.js"></script>
-  <script type="text/javascript">
-         document.addEventListener('DOMContentLoaded', function () {
-
-           // Get all "navbar-burger" elements
-           var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-           // Check if there are any navbar burgers
-           if ($navbarBurgers.length > 0) {
-
-             // Add a click event on each of them
-             $navbarBurgers.forEach(function ($el) {
-               $el.addEventListener('click', function () {
-
-                 // Get the target from the "data-target" attribute
-                 var target = $el.dataset.target;
-                 var $target = document.getElementById(target);
-
-                 // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-                 $el.classList.toggle('is-active');
-                 $target.classList.toggle('is-active');
-
-               });
-             });
-           }
-
-         });
-     </script>
+    </section>
+    <script src="../js/bulma.js"></script>
 </body>
+
 </html>
